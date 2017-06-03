@@ -1,0 +1,20 @@
+You've learned a lot about web development so far.I want you to take a moment to write down your thoughts about web development here.
+Answer the following questions:
+  
+* What new skills have you learned?
+
+* What has been easy?
+
+* What has been difficult?
+  
+* How have you used the problem solving strategies from the first project to overcome challenges so far?
+
+
+
+---
+
+Your response goes here!
+-> Well I think I have learned about basic html tags(the opening and closing of tags so far the <tag>content</tag> format).I maybe now able to make simple html pages from mockups or the material provided.
+-> Well everything upto now seems easy no logic or high thinking was required and I hadn't even struck once.
+-> Nothing seems to be diificult maybe because it is the basic level or the beginner level.
+-> Yeah I used the problem solving strategies and calmly and cooly did my project I didn't know the superscript or hr tags but the hints helped me and I searched it in the mdn link provided. 
