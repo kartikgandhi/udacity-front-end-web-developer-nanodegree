@@ -1,0 +1,28 @@
+.penguin-card
+{
+  border: 1px solid gray;
+  /*border-color: gray;*/
+  width: 320px;
+  /*margin-left: 500px;*/
+  margin-left: auto;
+  margin-right: auto;
+   padding: 10px;
+  -webkit-box-shadow: 20px 22px 0px -6px rgba(119,122,118,0.5);
+-moz-box-shadow: 20px 22px 0px -6px rgba(119,122,118,0.5);
+box-shadow: 20px 22px 0px -6px rgba(119,122,118,0.5);
+}
+.penguin-description
+{
+  border: solid;
+  border-color: gray;
+  padding: 10px;
+}
+.penguin-image
+{
+  padding-bottom: 10px;
+}
+.penguin-facts
+{
+ list-style-type: none;
+ padding: 0;
+}
