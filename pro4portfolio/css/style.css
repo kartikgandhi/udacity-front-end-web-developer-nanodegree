@@ -1,0 +1,27 @@
+.section {
+  padding-top: 10px;
+}
+
+.header {
+  text-align: right;
+}
+
+p {
+  text-align: center;
+}
+
+h1,h2,h3 {
+  font-family: 'Bahiana', cursive;
+  text-transform: uppercase;
+}
+
+.centrepic {
+  width: 100%;
+}
+
+.irony {
+  width:100%;
+}
+hr {
+  box-shadow: 5px 5px 2.5px #888888;
+}
