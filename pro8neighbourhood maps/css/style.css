@@ -1,0 +1,73 @@
+html,body
+{
+  height: 100%;
+  font-family: 'Satisfy', cursive;
+  font-size: 25px;
+}
+
+h1
+{
+  color: #525454;
+  font-size: 22px;
+  margin: 0 0 10px 0;
+  text-align: center;
+  background: aliceblue;
+  font-variant: small-caps;
+  font-size: -webkit-xxx-large;
+}
+
+input
+{
+  text-align: center;
+}
+
+#map
+{
+  height: 100%;
+  left: 15%;
+  position:absolute;
+  width:75%;
+}
+
+.sidenav
+{
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #fff;
+  overflow-x: hidden;
+  transition: 0.2s;
+  padding-top: 60px;
+  padding-left: 10px;
+}
+
+.sidenav button
+{
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav button:hover, .offcanvas button:focus
+{
+  color: #000;
+}
+
+.sidenav .closebtn
+{
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+@media screen and (max-height: 450px)
+{
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}

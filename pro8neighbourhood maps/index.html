@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>NEIGHBOURHOOD MAP</title>
+  <script src="js\jquery.min.js"></script>
+  <script src="js\knockout.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css?family=Satisfy" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4">
+        <div id="mySidenav" class="sidenav">
+          <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+          <h1>Karnal</h1>
+          <input type="text" placeholder="search here" data-bind="value:input,valueUpdate:'afterkeydown',event:{keyup:search}"><br><br>
+          <div data-bind="foreach: loc">
+            <button data-bind="visible:visibility ,event:{click:$parent.openmarker},text:title"></button><br><br>
+          </div>
+        </div>
+        <span style="font-size:30px;cursor:pointer" onclick="openNav()" >&#9776; open</span>
+      </div>
+      <div id="map" class="col-md-8"></div>
+    </div>
+  </div>
+    <script>
+      var map;
+      function initMap()
+      {
+        var styles = [
+          {
+            featureType: 'water',
+            stylers: [
+              { color: '#19a0d8' }
+            ]
+          },{
+            featureType: 'administrative',
+            elementType: 'labels.text.stroke',
+            stylers: [
+              { color: '#ffffff' },
+              { weight: 6 }
+            ]
+          },{
+            featureType: 'administrative',
+            elementType: 'labels.text.fill',
+            stylers: [
+              { color: '#e85113' }
+            ]
+          },{
+            featureType: 'road.highway',
+            elementType: 'geometry.stroke',
+            stylers: [
+              { color: '#efe9e4' },
+              { lightness: -40 }
+            ]
+          },{
+            featureType: 'transit.station',
+            stylers: [
+              { weight: 9 },
+              { hue: '#e85113' }
+            ]
+          },{
+            featureType: 'road.highway',
+            elementType: 'labels.icon',
+            stylers: [
+              { visibility: 'off' }
+            ]
+          },{
+            featureType: 'water',
+            elementType: 'labels.text.stroke',
+            stylers: [
+              { lightness: 100 }
+            ]
+          },{
+            featureType: 'water',
+            elementType: 'labels.text.fill',
+            stylers: [
+              { lightness: -100 }
+            ]
+          },{
+            featureType: 'poi',
+            elementType: 'geometry',
+            stylers: [
+              { visibility: 'on' },
+              { color: '#f0e4d3' }
+            ]
+          },{
+            featureType: 'road.highway',
+            elementType: 'geometry.fill',
+            stylers: [
+              { color: '#efe9e4' },
+              { lightness: -25 }
+            ]
+          }
+        ];
+        map = new google.maps.Map(document.getElementById('map'), {
+          center: {lat: 29.6980, lng: 76.9800},
+          styles:styles,
+          zoom: 12
+        });
+        ko.applyBindings(new viewmodel());
+      }
+
+    </script>
+    <script src="js\app.js"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAxjQtrHI_8pas28Cz0QGwLbSd-DStCXjI&v=3&callback=initMap" onerror="maperror()">
+    </script>
+</body>
+</html>
